@@ -1,0 +1,7 @@
+textarea {
+	resize: none;
+}
+
+.textarea-container {
+	margin-bottom: 3vh;
+}
