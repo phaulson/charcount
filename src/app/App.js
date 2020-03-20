@@ -21,7 +21,9 @@ class App extends React.Component {
 	exceptionChangeCallback(exs) {
 		this.setState(
 			{
-				exceptions: exs.sort((a, b) => b.length - a.length)
+				exceptions: exs
+					.sort((a, b) => b.length - a.length)
+					.map(ex => ex.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&"))
 			},
 			this.textArea.textAreaChange
 		);

@@ -34,6 +34,7 @@ class TextArea extends React.Component {
 		let textCpy = text;
 		let textWord = text;
 		exceptions.forEach(ex => {
+			console.log(ex);
 			text = text.replace(new RegExp(ex, "gi"), "");
 			if (ex !== " ") textWord = text.replace(new RegExp(ex, "gi"), "");
 		});
